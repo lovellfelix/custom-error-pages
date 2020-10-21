@@ -25,7 +25,7 @@ jobs:
         run: |
           docker buildx build \
             --platform linux/amd64,linux/arm64,linux/arm/v7 \
-            --tag raspbernetes/custom-error-pages:${{ github.sha }} \
+            --tag lovellfelix/custom-error-pages:${{ github.sha }} \
             -f Dockerfile \
             --push \
             .
@@ -35,8 +35,8 @@ jobs:
         run: |
           docker buildx build \
             --platform linux/amd64,linux/arm64,linux/arm/v7 \
-            --tag raspbernetes/custom-error-pages:latest \
-            --tag raspbernetes/custom-error-pages:v1.0.0 \
+            --tag lovellfelix/custom-error-pages:latest \
+            --tag lovellfelix/custom-error-pages:v1.0.0 \
             -f Dockerfile \
             --push \
             .
